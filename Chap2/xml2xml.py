@@ -1,7 +1,7 @@
-import subprocess
 import os;
-import sys;
 
+
+__author__='Shafin Thiyam'
 class xml_processsing:
     def __init__(self,input_xml,xsl,output):
         self.input_xml=input_xml
@@ -10,6 +10,3 @@ class xml_processsing:
 
     def tranformation(self):
         os.system("java net.sf.saxon.Transform -s:{0} -xsl:{1} -o:{2}".format(self.input_xml,self.xsl,self.output))
-
-
-
