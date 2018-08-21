@@ -7,4 +7,7 @@ app=Flask(__name__)
 def Home():
     return "hello flask"
 
+@app.route("/sub")
+def Sub():
+    return "This sub endpoint"
 app.run(port=5000)
