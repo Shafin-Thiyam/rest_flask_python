@@ -1,2 +1,2 @@
-inputs\test1.xml
-inputs\test2.xml
+input\test1.xml
+input\test2.xml
