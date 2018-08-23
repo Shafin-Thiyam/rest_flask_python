@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request, render_template
+import xml2xml
 
 app=Flask(__name__)
 #post is to recieve data
@@ -62,6 +63,13 @@ def create_item_in_store(name):
     new_store = {'name': request_data['name'], 'items': []}
     stores.append(new_store)
     return jsonify(new_store)
+
+@app.route("/xmltransformer/<string:inputs>")
+def get_xml(inputs):
+    print("processing started...")
+    xm2xm=xml2xml.xml_processsing('test.xsl',inputs)
+    xm2xm.tranformation()
+    print("processing Complete.")
 
 # End point for get /store/<string:name>/item
 @app.route("/store/<string:name>/item")

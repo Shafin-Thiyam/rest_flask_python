@@ -1,23 +1,17 @@
-import xml2xml
-from flask import Flask
+import os;
+
 __author__='Shafin Thiyam'
+class xml_processsing:
+    def __init__(self,xsl,input_xml):
+        self.xsl=xsl
+        self.input_xml=input_xml
 
-app=Flask(__name__)
+    def tranformation(self):
+        if self.input_xml.endswith('txt'):
+            input_list = open(self.input_xml).read().split("\n")
+            for i in input_list:
+                os.system("java net.sf.saxon.Transform -s:{0} -xsl:{1} -o:{2}_output.xml".format(i,self.xsl,i.split('.')[0]))
+            #os.system("java net.sf.saxon.Transform -s:{0} -xsl:{1} -o:{2}_output.xml".format(i,self.xsl,i.split('.')[0]) for i in input_list)
 
-
-@app.route("/")
-def welcome():
-    print("Welcome to xmltransformer")
-
-
-
-@app.route("/xmltransformer/<string:inputs>")
-def get_xml(inputs):
-    xm2xm=xml2xml.xml_processsing('Agency_Doc_Transformation.xsl',inputs)
-    xm2xm.tranformation()
-
-if __name__=='__main__':
-    app.run(port=9090,debug=True)
-
-
-
+        else:
+            os.system("java net.sf.saxon.Transform -s:{0} -xsl:{1} -o:{2}_output.xml".format(self.input_xml,self.xsl,self.input_xml.split('.')[0]))
