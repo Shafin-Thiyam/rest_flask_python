@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request, render_template
-import xml2xml
+
+
 
 app=Flask(__name__)
 #post is to recieve data
@@ -47,30 +48,22 @@ def get_stores():
     return jsonify({'stores':stores})
 
 # End point for post /store/<string:name>/item{name:,price:,} data that will recieve is {name;}
-@app.route("/store/<string:name>/item",methods=['POST'])
+@app.route('/store/<string:name>/item',methods=['POST'])
 def create_item_in_store(name):
     request_data = request.get_json()
-    for i in stores:
-        if i['name']==name:
+    for store in stores:
+        if store['name']==name:
             new_item={
                 'name':request_data['name'],
                 'price':request_data['price'],
             }
-            stores['items'].append(new_item)
+            store['items'].append(new_item)
             return jsonify(new_item)
     return jsonify({'message':'store not found'})
 
     new_store = {'name': request_data['name'], 'items': []}
     stores.append(new_store)
     return jsonify(new_store)
-
-@app.route("/xmltransformer/<string:inputs>")
-def get_xml(inputs):
-    print("processing started...")
-    xm2xm=xml2xml.xml_processsing('test.xsl',inputs)
-    xm2xm.tranformation()
-    print("processing Complete.")
-
 # End point for get /store/<string:name>/item
 @app.route("/store/<string:name>/item")
 def get_item_in_store(name):
