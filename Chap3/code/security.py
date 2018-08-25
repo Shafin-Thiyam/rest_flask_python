@@ -1,42 +1,15 @@
 from user import users
-user=[
-    {'id':1,
-     'username':'Shafin',
-     'password':'hamna'},
-    {'id': 2,
-     'username': 'hamna',
-     'password': 'haiqa'},
-    {'id': 3,
-     'username': 'haiqa',
-     'password': 'shafinhamna'}
-]
-username_mapping={'shafin':{'id':1,
-                  'username':'Shafin',
-                  'password':'hamna'},
 
-                  'hamna':{'id': 2,
-                  'username': 'hamna',
-                  'password': 'haiqa'},
+users=[users(1,'Shafin','hamna'),
+       users(1, 'Hamna', 'haiqa'),
+       users(1, 'Haiqa', 'ShafinHamna'),]
 
-                  'haiqa':{'id': 3,
-                  'username': 'haiqa',
-                  'password': 'shafinhamna'}}
-
-userid_mapping = {1: {'id': 1,
-                               'username': 'Shafin',
-                               'password': 'hamna'},
-
-                  2: {'id': 2,
-                              'username': 'hamna',
-                              'password': 'haiqa'},
-
-                  3: {'id': 3,
-                              'username': 'haiqa',
-                              'password': 'shafinhamna'}}
+username_mapping={u.username:u for u in users}
+userid_mapping ={u.id:u for u in users}
 
 def authenticate(username,password):
-    usr= username_mapping.get(username,None)
-    if usr and user.password==password:
+    user= username_mapping.get(username,None)
+    if user and user.password==password:
         return user
 
 def identity(payload):

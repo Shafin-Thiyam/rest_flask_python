@@ -1,10 +1,12 @@
 from flask_restful import Resource,Api
 from flask import Flask,request
+from flask_jwt import JWT,jwt_required
 
 
 items=[]
 
 class Item(Resource):
+    @jwt_required
     def get(self,name):
         #for item in items:
             #item=list(filter(lambda x: x['name']==name, items))  though list will give list of item but in this case we have single item so better to use 'next'
