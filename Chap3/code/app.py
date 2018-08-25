@@ -5,6 +5,8 @@ import TestRestFul
 
 
 app=Flask(__name__)
+app.secret_key="haiqa"
+
 api=Api(app)
 
 
