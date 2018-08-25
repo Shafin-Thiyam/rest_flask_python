@@ -35,7 +35,7 @@ else:
     build = 0
 
 class Trans:
-    def POST(self):
+    def POST(self,xsl):
         out={}
         x=web.input(input_file={})
 
@@ -52,8 +52,8 @@ class Trans:
             input_file = os.path.join(work_dir, file_name)
             with open(input_file, 'wb') as saved:
                 shutil.copyfileobj(x['input_file'].file, saved)
-
-            xml_pro=xml_processsing()
+            xml_pro=xml_processsing(xsl,input_file)
+            xml_pro.tranformation()
 
 class Tag:
 
@@ -78,6 +78,8 @@ class Tag:
                 shutil.copyfileobj(x['input_file'].file, saved)
 
             output_file = os.path.join(work_dir, "out_" + file_name)
+
+
 
             # python = sys.executable
             # at_cmd = python + " src/Autotagger.py " + publication + " " + input_file + " " + output_file + " xml"
