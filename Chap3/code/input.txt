@@ -1,2 +1,0 @@
-input\test1.xml
-input\test2.xml
