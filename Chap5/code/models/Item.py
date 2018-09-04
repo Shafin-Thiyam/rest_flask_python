@@ -6,7 +6,7 @@ class ItemModel:
         self.name=name
         self.price=price
 
-    def json(self):
+    def jsons(self):
         return {'name':self.name,'price':self.price}
 
     @classmethod
@@ -18,8 +18,7 @@ class ItemModel:
         row = result.fetchone()
         con.close()
         if row:
-            return cls(*row), 200
-
+            return cls(*row)
 
     def insert(self):
         con = sqlite3.connect('data.db')

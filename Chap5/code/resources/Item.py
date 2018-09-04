@@ -15,8 +15,7 @@ class Item(Resource):
     def get(self,name):
         item=ItemModel.findByName(name)
         if item:
-            return item.json()
-
+            return item.jsons()
         return {'Message':'Item not found'},404
 
     def delete(self,name):
@@ -31,8 +30,8 @@ class Item(Resource):
 
     def put(self,name):
         getdata=Item.parser.parse_args()
-        updated_item = ItemModel(name,getdata['price'])
         item=ItemModel.findByName(name)
+        updated_item = ItemModel(name,getdata['price'])
         if item is None:
             try:
                 updated_item.insert()
@@ -57,6 +56,7 @@ class Item(Resource):
             return {"Message":"Error occured while inserting the item."},500 # internal server error status code not a code issue
 
         return item.json(),201 #201 is for created
+
 
 class Itemlist(Resource):
 
