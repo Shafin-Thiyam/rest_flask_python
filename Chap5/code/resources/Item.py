@@ -42,7 +42,7 @@ class Item(Resource):
                 updated_item.update()
             except:
                 return {"Message":"Error occured while updating the item."},500 # internal server error status code not a code issue
-        return updated_item.json()
+        return updated_item.jsons()
 
     def post(self,name):
         if ItemModel.findByName(name):
@@ -55,7 +55,7 @@ class Item(Resource):
         except:
             return {"Message":"Error occured while inserting the item."},500 # internal server error status code not a code issue
 
-        return item.json(),201 #201 is for created
+        return item.jsons()
 
 
 class Itemlist(Resource):
