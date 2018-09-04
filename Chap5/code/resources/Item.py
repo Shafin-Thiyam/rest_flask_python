@@ -15,7 +15,7 @@ class Item(Resource):
     def get(self,name):
         item=ItemModel.findByName(name)
         if item:
-            return item.jsons()
+            return item.json()
         return {'Message':'Item not found'},404
 
     def delete(self,name):
@@ -42,7 +42,7 @@ class Item(Resource):
                 updated_item.update()
             except:
                 return {"Message":"Error occured while updating the item."},500 # internal server error status code not a code issue
-        return updated_item.jsons()
+        return updated_item.json()
 
     def post(self,name):
         if ItemModel.findByName(name):
@@ -55,7 +55,7 @@ class Item(Resource):
         except:
             return {"Message":"Error occured while inserting the item."},500 # internal server error status code not a code issue
 
-        return item.jsons()
+        return item.json()
 
 
 class Itemlist(Resource):

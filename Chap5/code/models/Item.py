@@ -6,7 +6,7 @@ class ItemModel:
         self.name=name
         self.price=price
 
-    def jsons(self):
+    def json(self):
         return {'name':self.name,'price':self.price}
 
     @classmethod
