@@ -1,0 +1,39 @@
+Git workflow
+Initialize/Create git repository: which git will start been able to tell what file changed and what file added
+    git init:  Initiazation open access to all the git command listed below
+    git status : shows which branch we are in, show recent commit message and what is there to commit.
+    git add : allow recently changed/created file to stagging area.
+               eg: git add <list of files>
+    git rm --cached <file>... to exclude file added to be included in next commit.
+    git commit -m "message which give description about the commit." each has commit code which can be used while roleback.
+    git remote add origin <git repository location which can be https/ssh use https>
+      eg:  git remote add origin <https://github.com/Shafin-Thiyam/rest_flask_python.git>
+    git push will push all the commited file to remote repo.
+        If we have not set up master repo push will fail. following command will resolve the issue.
+            git push --set-upstream origin master
+        it will ask for user name and password of git account.
+    git pull will get latest version of the code from gir server
+
+SSH key: is way of encrypting info it generate public key(for decrypt) and private key(for encrytpt)
+    ssh-keygen : it will generate public and private key pair.
+                need to enter file which we use to save key.
+                It will ask for pass phrase its optional
+                now we can share the public key and way to do that:
+                    Go to the location of where public/private key is saved
+                    open file <file-Location>/id_rsa.pub and copy all of it.
+                    go to github account -> profile ->edit profile ->SSH and GPG key -> new ssh key ->
+                        add title and paste copied text in key -> add ssh key
+     git remote remove origin
+     git remote add origin <ssh version of repo> this will never ask for password if the system is the same system from which public key is generated.
+
+     Readme file give description the repository.
+        use markedown which is same as jupyter notebook syntex. Eg ## for heading ** for bold etc...
+
+        proper read me file has:
+        ## Heading: project title
+        **Installation: dependancy details**
+        **Description:** detail of the project and your contact detail helpfull for the jobs.
+        **Implementation:** How it was implemented  for what purpose.
+
+
+
