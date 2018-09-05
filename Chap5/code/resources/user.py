@@ -17,10 +17,13 @@ class User_Register(Resource):
         if(UsersModel.findByUserName(data['username'],)) is not None:
             return {"messaage":"Username already exists"},400
 
-        con=sqlite3.connect('data.db')
-        cur=con.cursor()
-        query="insert into users values(NULL, ?, ?)"
-        cur.execute(query,(data['username'],data['password']))
-        con.commit()
-        con.close()
+        #users=UsersModel(data['username'],data['password'])
+        users = UsersModel(**data)# since data is key value pair we can implement **kwargs
+        users.save_to_db()
+        #con=sqlite3.connect('data.db')
+        #cur=con.cursor()
+        #query="insert into users values(NULL, ?, ?)"
+        #cur.execute(query,(data['username'],data['password']))
+        #con.commit()
+        #con.close()
         return {"messaage":"User created successfully"},201
