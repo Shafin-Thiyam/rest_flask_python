@@ -1,0 +1,11 @@
+What is Heroku:
+    It is web service which runs ur code and allow other to access it.
+    It can run flask application.
+    It make them availabe to other to interact with.
+    If u run flask from ur system other can't make request and login etc.
+    If we run it in Heroku it can be access since heroku give url and address which is called hosting.
+    Heroku can be used to host flask app several other app.
+    Heroku works with Dyno. Dyno is similar to server or in other word virtual system.
+            Dyno : run python,flask,restful, uwsgi
+    Heroku enables SSL(Secure Socket Layer) which communicate between client(you) and server(Heroku) to be encrypted.
+
