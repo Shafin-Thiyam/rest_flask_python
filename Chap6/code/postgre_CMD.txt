@@ -1,0 +1,14 @@
+
+init to initialise db
+pg_ctl -D . -l logfile start
+pg_ctl -D . -l logfile stop
+
+create database data
+
+Change password 
+ALTER USER ShafinHamna WITH PASSWORD 'admin'
+
+connect data
+
+connection string
+postgresql://ShafinHamna:admin@localhost/data

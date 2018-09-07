@@ -1,0 +1,136 @@
+2018-09-06 10:23:33.870 IST [1348] LOG:  could not bind IPv6 address "::1": Permission denied
+2018-09-06 10:23:33.870 IST [1348] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2018-09-06 10:23:33.871 IST [1348] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2018-09-06 10:23:33.871 IST [1348] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2018-09-06 10:23:33.871 IST [1348] WARNING:  could not create listen socket for "localhost"
+2018-09-06 10:23:33.871 IST [1348] FATAL:  could not create any TCP/IP sockets
+2018-09-06 10:23:33.872 IST [1348] LOG:  database system is shut down
+2018-09-06 10:25:00.826 IST [6580] LOG:  listening on IPv6 address "::1", port 5432
+2018-09-06 10:25:00.827 IST [6580] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2018-09-06 10:25:01.514 IST [16440] LOG:  database system was shut down at 2018-09-06 09:44:44 IST
+2018-09-06 10:25:02.527 IST [6580] LOG:  database system is ready to accept connections
+2018-09-06 10:29:11.269 IST [6580] LOG:  received fast shutdown request
+2018-09-06 10:29:11.321 IST [6580] LOG:  aborting any active transactions
+2018-09-06 10:29:11.351 IST [6580] LOG:  worker process: logical replication launcher (PID 13600) exited with exit code 1
+2018-09-06 10:29:11.367 IST [14872] LOG:  shutting down
+2018-09-06 10:29:11.672 IST [6580] LOG:  database system is shut down
+2018-09-06 10:32:48.167 IST [13112] LOG:  listening on IPv6 address "::1", port 5432
+2018-09-06 10:32:48.168 IST [13112] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2018-09-06 10:32:48.443 IST [15580] LOG:  database system was shut down at 2018-09-06 10:29:11 IST
+2018-09-06 10:32:49.268 IST [13112] LOG:  database system is ready to accept connections
+2018-09-06 10:34:56.731 IST [16524] ERROR:  syntax error at or near "CREATE" at character 22
+2018-09-06 10:34:56.731 IST [16524] STATEMENT:  create database data
+	CREATE DATABASE data;
+2018-09-07 09:17:51.580 IST [13112] LOG:  server process (PID 16524) was terminated by exception 0xC000013A
+2018-09-07 09:17:51.580 IST [13112] DETAIL:  Failed process was running: CREATE DATABASE data;
+2018-09-07 09:17:51.580 IST [13112] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2018-09-07 09:17:51.581 IST [13112] LOG:  terminating any other active server processes
+2018-09-07 09:17:51.616 IST [16148] WARNING:  terminating connection because of crash of another server process
+2018-09-07 09:17:51.616 IST [16148] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2018-09-07 09:17:51.616 IST [16148] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2018-09-07 09:17:51.629 IST [13112] LOG:  statistics collector process (PID 5656) was terminated by exception 0xC000013A
+2018-09-07 09:17:51.629 IST [13112] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2018-09-07 09:17:52.107 IST [13112] LOG:  all server processes terminated; reinitializing
+2018-09-07 09:17:52.257 IST [6900] LOG:  database system was interrupted; last known up at 2018-09-07 09:16:27 IST
+2018-09-07 09:18:11.818 IST [13112] LOG:  received fast shutdown request
+2018-09-07 09:18:32.120 IST [6900] LOG:  could not open file "./logfile": sharing violation
+2018-09-07 09:18:32.120 IST [6900] DETAIL:  Continuing to retry for 30 seconds.
+2018-09-07 09:18:32.120 IST [6900] HINT:  You might have antivirus, backup, or similar software interfering with the database system.
+2018-09-07 09:18:59.169 IST [6900] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-09-07 09:18:59.453 IST [6900] LOG:  redo starts at 0/15BE9C0
+2018-09-07 09:18:59.474 IST [13112] LOG:  abnormal database system shutdown
+2018-09-07 09:18:59.485 IST [13112] LOG:  database system is shut down
+2018-09-07 09:20:37.868 IST [12108] LOG:  listening on IPv6 address "::1", port 5432
+2018-09-07 09:20:37.870 IST [12108] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2018-09-07 09:20:38.846 IST [12628] LOG:  database system was interrupted while in recovery at 2018-09-07 09:18:59 IST
+2018-09-07 09:20:38.846 IST [12628] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-09-07 09:21:06.792 IST [12628] LOG:  could not open file "./logfile": sharing violation
+2018-09-07 09:21:06.792 IST [12628] DETAIL:  Continuing to retry for 30 seconds.
+2018-09-07 09:21:06.792 IST [12628] HINT:  You might have antivirus, backup, or similar software interfering with the database system.
+2018-09-07 09:21:32.432 IST [12628] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-09-07 09:21:32.576 IST [12628] LOG:  redo starts at 0/15BE9C0
+2018-09-07 09:21:32.577 IST [12628] LOG:  invalid record length at 0/15BEAA0: wanted 24, got 0
+2018-09-07 09:21:32.577 IST [12628] LOG:  redo done at 0/15BEA68
+2018-09-07 09:21:33.960 IST [12108] LOG:  database system is ready to accept connections
+2018-09-07 09:23:11.272 IST [9896] ERROR:  syntax error at or near "create" at character 22
+2018-09-07 09:23:11.272 IST [9896] STATEMENT:  create database data
+	create database data;
+2018-09-07 09:28:05.534 IST [9896] ERROR:  syntax error at or near "ALTER" at character 46
+2018-09-07 09:28:05.534 IST [9896] STATEMENT:  ALTER USER ShafinHamna WITH PASSWORD 'admin'
+	ALTER USER ShafinHamna WITH PASSWORD 'admin'
+	/list
+	ALTER USER ShafinHamna WITH PASSWORD 'admin'
+	ALTER USER ShafinHamna WITH PASSWORD 'admin';
+2018-09-07 09:28:07.604 IST [9896] ERROR:  role "shafinhamna" does not exist
+2018-09-07 09:28:07.604 IST [9896] STATEMENT:  ALTER USER ShafinHamna WITH PASSWORD 'admin';
+2018-09-07 09:28:57.051 IST [9896] ERROR:  syntax error at or near "select" at character 19
+2018-09-07 09:28:57.051 IST [9896] STATEMENT:  select *from user
+	select *from user
+	select *from user;
+2018-09-07 09:29:55.687 IST [9896] ERROR:  syntax error at or near "ALTER" at character 46
+2018-09-07 09:29:55.687 IST [9896] STATEMENT:  ALTER USER ShafinHamna WITH PASSWORD 'admin'
+	ALTER USER ShafinHamna WITH PASSWORD 'admin';
+2018-09-07 09:29:58.112 IST [9896] ERROR:  role "shafinhamna" does not exist
+2018-09-07 09:29:58.112 IST [9896] STATEMENT:  ALTER USER ShafinHamna WITH PASSWORD 'admin';
+2018-09-07 09:32:07.880 IST [9896] ERROR:  relation "role" does not exist at character 14
+2018-09-07 09:32:07.880 IST [9896] STATEMENT:  select *from role;
+2018-09-07 09:32:09.476 IST [9896] ERROR:  relation "role" does not exist at character 14
+2018-09-07 09:32:09.476 IST [9896] STATEMENT:  select *from role;
+2018-09-07 09:32:13.902 IST [9896] ERROR:  relation "role" does not exist at character 15
+2018-09-07 09:32:13.902 IST [9896] STATEMENT:  select * from role;
+2018-09-07 09:32:22.908 IST [9896] ERROR:  relation "role" does not exist at character 15
+2018-09-07 09:32:22.908 IST [9896] STATEMENT:  select * from ROLE;
+2018-09-07 09:32:39.587 IST [9896] ERROR:  syntax error at or near "create" at character 25
+2018-09-07 09:32:39.587 IST [9896] STATEMENT:  create role shafinhamna
+	create role shafinhamna;
+2018-09-07 09:36:58.381 IST [9896] ERROR:  role "shafinhamna" does not exist
+2018-09-07 09:36:58.381 IST [9896] STATEMENT:  GRANT data to ShafinHamna;
+2018-09-07 09:37:39.722 IST [9896] ERROR:  role "shafinhamna" does not exist
+2018-09-07 09:37:39.722 IST [9896] STATEMENT:  drop role shafinhamna;
+2018-09-07 09:37:56.788 IST [9896] ERROR:  role "shafinhamna" does not exist
+2018-09-07 09:37:56.788 IST [9896] STATEMENT:  GRANT data to ShafinHamna;
+2018-09-07 09:41:21.653 IST [9896] ERROR:  role "shafinhamna" does not exist
+2018-09-07 09:41:21.653 IST [9896] STATEMENT:  grant admin to ShafinHamna
+	;
+2018-09-07 09:42:36.003 IST [9896] ERROR:  relation "data" does not exist
+2018-09-07 09:42:36.003 IST [9896] STATEMENT:  grant all on data to ShafinHamna
+	;
+2018-09-07 09:42:53.997 IST [9896] ERROR:  role "shafinhamna" does not exist
+2018-09-07 09:42:53.997 IST [9896] STATEMENT:  grant all on database data to ShafinHamna
+	;
+2018-09-07 09:43:04.825 IST [9896] ERROR:  role "postgres" does not exist
+2018-09-07 09:43:04.825 IST [9896] STATEMENT:  grant all on database data to postgres;
+2018-09-07 10:01:51.986 IST [13956] ERROR:  syntax error at or near "clear" at character 1
+2018-09-07 10:01:51.986 IST [13956] STATEMENT:  clear
+	exit
+	select * from users;
+2018-09-07 10:02:48.695 IST [13956] ERROR:  syntax error at or near "desc" at character 1
+2018-09-07 10:02:48.695 IST [13956] STATEMENT:  desc item
+	;
+2018-09-07 10:02:52.907 IST [13956] ERROR:  syntax error at or near "desc" at character 1
+2018-09-07 10:02:52.907 IST [13956] STATEMENT:  desc item;
+2018-09-07 10:02:54.316 IST [13956] ERROR:  syntax error at or near "desc" at character 1
+2018-09-07 10:02:54.316 IST [13956] STATEMENT:  desc item;
+2018-09-07 10:03:15.049 IST [13956] ERROR:  relation "item" does not exist at character 15
+2018-09-07 10:03:15.049 IST [13956] STATEMENT:  select * from Item;
+2018-09-07 10:03:17.151 IST [13956] ERROR:  relation "item" does not exist at character 15
+2018-09-07 10:03:17.151 IST [13956] STATEMENT:  select * from Item;
+2018-09-07 10:03:22.788 IST [13956] ERROR:  relation "item" does not exist at character 15
+2018-09-07 10:03:22.788 IST [13956] STATEMENT:  select * from item;
+2018-09-07 10:03:26.070 IST [13956] ERROR:  relation "item" does not exist at character 15
+2018-09-07 10:03:26.070 IST [13956] STATEMENT:  select * from item;
+2018-09-07 10:03:33.649 IST [13956] ERROR:  relation "item" does not exist at character 15
+2018-09-07 10:03:33.649 IST [13956] STATEMENT:  select * from item;
+2018-09-07 10:04:14.769 IST [13956] ERROR:  relation "item" does not exist at character 15
+2018-09-07 10:04:14.769 IST [13956] STATEMENT:  select * from Item;
+2018-09-07 10:04:19.960 IST [13956] ERROR:  relation "item" does not exist at character 15
+2018-09-07 10:04:19.960 IST [13956] STATEMENT:  select * from Item;
+2018-09-07 10:04:21.376 IST [13956] ERROR:  relation "item" does not exist at character 15
+2018-09-07 10:04:21.376 IST [13956] STATEMENT:  select * from Item;
+2018-09-07 10:06:56.559 IST [13956] ERROR:  relation "item" does not exist at character 15
+2018-09-07 10:06:56.559 IST [13956] STATEMENT:  select * from Item;
+2018-09-07 10:07:42.004 IST [13956] ERROR:  relation "stores" does not exist at character 15
+2018-09-07 10:07:42.004 IST [13956] STATEMENT:  SELECT * FROM Stores;
+2018-09-07 10:11:49.521 IST [4776] ERROR:  insert or update on table "Item" violates foreign key constraint "Item_store_id_fkey"
+2018-09-07 10:11:49.521 IST [4776] DETAIL:  Key (store_id)=(3) is not present in table "Stores".
+2018-09-07 10:11:49.521 IST [4776] STATEMENT:  INSERT INTO "Item" (name, price, store_id) VALUES ('almira', 1222.22, 3) RETURNING "Item".id
